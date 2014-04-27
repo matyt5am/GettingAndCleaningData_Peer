@@ -1,6 +1,6 @@
 # Code Book
 
-## Information about dataset
+## 1. Information about dataset
 
 Dataset was retrieved on 28/04/2014 from 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
@@ -42,7 +42,10 @@ N/A
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
-## Notes to the code run_analysis.R
+## 2. Notes to the work code run_analysis.R
+
 First, it is necessary to download the .zip file, unpack it and save folder "UCI HAR Dataset" to your working directory. The code works with the folder within the working directory, so do not change the working directory or the name of the folder.
 
+### Structure of the code
 
+There are comments in the code, so I will just briefly describe the overall logic of the code. At the beginning it retrieves testing and training data and merge them together in one dataset. Then, it retrieves the column labels and activity descriptions and add them to the dataset. Consequently it extracts only the measurements on the mean and standard deviation for each measurement as required in the assignment. Finally, it creates an independent tidy data set with the average of each variable for each activity and each subject and write it into the "tidy_dataset.txt" (values are separated by ";").
