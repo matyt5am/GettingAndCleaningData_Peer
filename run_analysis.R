@@ -34,7 +34,6 @@ data <- merge(activ_lab, data, all = TRUE)
 data_extract <- data[, c(2, 3, grep("-mean\\(\\)|-std\\(\\)", names(data)))]
 
 ## -> (5) Create a second, independent tidy data set with the average of each variable for each activity and each subject 
-
 tidy_dataset <- melt(data_extract, id = c('activity', 'subject'))
 tidy_dataset <- dcast(tidy_dataset, activity + subject ~ variable, mean)
 
